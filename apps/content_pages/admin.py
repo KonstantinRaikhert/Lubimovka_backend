@@ -14,6 +14,12 @@ from apps.content_pages.models import (
 class ContentInline(admin.StackedInline):
     model = Content
     extra = 0
+    sortable_field_name = "position"
+    related_lookup_fields = {
+        "generic": [
+            ["content_type", "object_id"],
+        ],
+    }
 
 
 class GenericContentInline(GenericTabularInline):
@@ -37,10 +43,11 @@ class OrderedImageInline(admin.TabularInline):
     model = OrderedImage
     min_num = 1
     extra = 0
+    sortable_field_name = "position"
 
 
 class ImagesBlockAdmin(admin.ModelAdmin):
-    inlines = [GenericContentInline, OrderedImageInline]
+    inlines = [OrderedImageInline, GenericContentInline]
 
 
 admin.site.register(ContentPage, ContentPageAdmin)

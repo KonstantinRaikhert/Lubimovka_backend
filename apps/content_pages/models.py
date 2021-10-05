@@ -2,9 +2,7 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.db.models.deletion import CASCADE
-from gfklookupwidget.fields import GfkLookupField
 
-from apps.content_pages.fields import OrderField
 from apps.core.models import BaseModel
 
 
@@ -38,15 +36,12 @@ class Content(models.Model):
             )
         },
     )
-    object_id = GfkLookupField("content_type")
+    object_id = models.PositiveIntegerField()
     item = GenericForeignKey()
-    order = OrderField(
-        blank=True,
-        for_fields=["content_page"],
-    )
+    position = models.PositiveSmallIntegerField("Position")
 
     class Meta:
-        ordering = ["order"]
+        ordering = ["position"]
 
     def __str__(self):
         return f"Блок сложной верстки — {self.item}"
@@ -92,16 +87,13 @@ class OrderedImage(models.Model):
         on_delete=CASCADE,
         related_name="ordered_images",
     )
-    order = OrderField(
-        blank=True,
-        for_fields=["image_block"],
-    )
+    position = models.PositiveSmallIntegerField("Position")
 
     class Meta:
-        ordering = ["order"]
+        ordering = ["position"]
 
     def __str__(self):
-        return f"{self.order} — {self.image}"
+        return f"{self.position} — {self.image}"
 
 
 class Video(ItemBase):

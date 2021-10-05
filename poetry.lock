@@ -224,6 +224,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "django-grappelli"
+version = "2.15.1"
+description = "A jazzy skin for the Django Admin-Interface."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "djangorestframework"
 version = "3.12.4"
 description = "Web APIs for Django, made easy."
@@ -808,7 +816,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "7ae6d8bd0c5d0605282a31eb167fde929f64f250a6fcfa1dc415363966a7d3d2"
+content-hash = "5dc5aa21c99739d0a2654ad8ab0adb13ed2068244b29c10e55e938325ef69b02"
 
 [metadata.files]
 appnope = [
@@ -939,6 +947,10 @@ django-filter = [
 ]
 django-gfklookupwidget = [
     {file = "django-gfklookupwidget-1.0.9.tar.gz", hash = "sha256:7b02e121c30a92634000dd0d98cb4e036e290ca43bbdd7bc0ae64da0732f96fb"},
+]
+django-grappelli = [
+    {file = "django-grappelli-2.15.1.tar.gz", hash = "sha256:bc38e7c2585c20b6c8c6a4d984beb4c0fe62ae13421d1fe6614d04dda2096014"},
+    {file = "django_grappelli-2.15.1-py2.py3-none-any.whl", hash = "sha256:b9aa386d63a95c37f3741aac98bd545c70ff51cf9104a1419dd6568d2e2cf2ea"},
 ]
 djangorestframework = [
     {file = "djangorestframework-3.12.4-py3-none-any.whl", hash = "sha256:6d1d59f623a5ad0509fe0d6bfe93cbdfe17b8116ebc8eda86d45f6e16e819aaf"},

@@ -47,6 +47,7 @@ api_schema_patterns = [
 ]
 
 urlpatterns = [
+    path("grappelli/", include("grappelli.urls")),  # grappelli URLS
     path(
         route="admin/",
         view=admin.site.urls,
