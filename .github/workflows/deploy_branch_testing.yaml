@@ -1,23 +1,23 @@
 name: Deploy your branch for testing
 
-on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Please, enter your name and surname'
-        default: 'Иван Иванов'
-        required: true
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       name:
+#         description: 'Please, enter your name and surname'
+#         default: 'Иван Иванов'
+#         required: true
 
-env:
-  REGISTRY: ghcr.io
-  ORGANIZATION: studio-yandex-practicum
-  REPOSITORY_NAME: lubimovka_backend
+# env:
+#   REGISTRY: ghcr.io
+#   ORGANIZATION: studio-yandex-practicum
+#   REPOSITORY_NAME: lubimovka_backend
 
-defaults:
-  run:
-    working-directory: .
+# defaults:
+#   run:
+#     working-directory: .
 
-jobs:
+# jobs:
   # tests:
   #     name: Run tests
   #     runs-on: ubuntu-latest
