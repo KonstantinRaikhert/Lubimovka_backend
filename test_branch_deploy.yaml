@@ -9,7 +9,7 @@ services:
     ports:
       - 5962:5432
     env_file:
-      - .env-dev
+      - .env-test
   backend_test:
     image: "${IMAGE}:${IMAGE_TAG}"
     restart: always
@@ -19,7 +19,7 @@ services:
     depends_on:
       - postgres_test
     env_file:
-      - .env-dev
+      - .env-test
   migrations_test:
     image: "${IMAGE}:${IMAGE_TAG}"
     volumes:
@@ -31,7 +31,7 @@ services:
     depends_on:
       - backend_test
     env_file:
-      - .env-dev
+      - .env-test
   # swag_test:
   #   image: ghcr.io/linuxserver/swag
   #   container_name: swag_test
@@ -42,7 +42,7 @@ services:
   #     - VALIDATION=http
   #     - CERTPROVIDER=zerossl
   #   env_file:
-  #     - .env-dev
+  #     - .env-test
   #   volumes:
   #     - ./swag_test_config/:/config/
   #     - ./swag_nginx_test.conf:/config/nginx/site-confs/default
