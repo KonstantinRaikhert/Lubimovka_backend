@@ -173,7 +173,7 @@ jobs:
                   https://github.com/${{ github.repository }}/pull/${{env.PR}}
 
                   Сcылка на документацию в Swagger:
-                  https://lubimovka.kiryanov.ru/api/schema/swagger-ui/
+                  https://develop.prostringer.ru/api/schema/swagger-ui/
 
                   Панель администратора:
-                  https://lubimovka.kiryanov.ru/admin/
+                  https://develop.prostringer.ru/admin/
