@@ -23,6 +23,7 @@ services:
     networks:
       - test_db_network
       - test_swag_network
+
   migrations_test:
     image: "${IMAGE}:${IMAGE_TAG}"
     volumes:
@@ -57,8 +58,8 @@ services:
       - static_value_test:/config/static/
       - media_value_test:/config/media/
     ports:
-      - 443:443
-      - 80:80
+      - 442:443
+      - 81:80
     depends_on:
       - backend_test
     restart: unless-stopped
