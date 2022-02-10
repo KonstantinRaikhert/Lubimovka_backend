@@ -20,7 +20,8 @@ jobs:
     -
       name: Pull from develop branch
       run: |
-        git branch
+        git config pull.rebase true
+        git pull origin develop
     -
       name: Set up Python
       uses: actions/setup-python@v2
