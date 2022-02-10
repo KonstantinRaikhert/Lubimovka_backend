@@ -20,8 +20,8 @@ jobs:
     -
       name: Pull from develop branch
       run: |
-        git fetch
-        git merge origin/develop
+        git config --global pull.ff only
+        git pull origin develop
     -
       name: Set up Python
       uses: actions/setup-python@v2
