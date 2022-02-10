@@ -20,10 +20,9 @@ jobs:
     -
       name: Pull from develop branch
       run: |
+        git fetch
         git branch temp
         git checkout temp
-        git add .
-        git commit -m "temp"
         git pull origin develop
     -
       name: Set up Python
