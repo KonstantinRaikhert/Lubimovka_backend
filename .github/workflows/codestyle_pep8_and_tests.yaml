@@ -20,7 +20,7 @@ jobs:
     -
       name: Pull from develop branch
       run: |
-        git config pull.rebase true
+        git config pull.rebase false
         git pull origin develop
     -
       name: Set up Python
