@@ -21,6 +21,9 @@ jobs:
       name: Pull from develop branch
       run: |
         git pull origin develop --rebase
+        git add .
+        git commit -m "?"
+        git rebase --continue
     -
       name: Set up Python
       uses: actions/setup-python@v2
