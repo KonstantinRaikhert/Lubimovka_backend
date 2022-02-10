@@ -21,9 +21,7 @@ jobs:
       name: Pull from develop branch
       run: |
         git fetch
-        git branch temp
-        git checkout temp
-        git pull origin develop
+        git merge origin/develop
     -
       name: Set up Python
       uses: actions/setup-python@v2
