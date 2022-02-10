@@ -21,7 +21,7 @@ jobs:
       name: Pull from develop branch
       run: |
         git config --global pull.ff only
-        git pull origin develop
+        git pull origin develop --ff
     -
       name: Set up Python
       uses: actions/setup-python@v2
