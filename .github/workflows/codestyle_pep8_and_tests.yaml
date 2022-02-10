@@ -3,7 +3,7 @@ name: codestyle with PEP8 and tests
 on:
   push:
     branches:
-      - "*"
+      - '*'
   pull_request:
     branches:
       - develop
@@ -17,6 +17,7 @@ jobs:
     -
       name: Check out the repo
       uses: actions/checkout@v2
+      run: git pull origin develop
     -
       name: Set up Python
       uses: actions/setup-python@v2
