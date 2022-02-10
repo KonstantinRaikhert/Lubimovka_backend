@@ -22,6 +22,7 @@ jobs:
       run: |
         git branch temp
         git checkout temp
+        git config pull.rebase false
         git pull origin develop
     -
       name: Set up Python
