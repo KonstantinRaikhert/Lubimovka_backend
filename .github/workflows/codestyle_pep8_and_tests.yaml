@@ -20,7 +20,7 @@ jobs:
     -
       name: Pull from develop branch
       run: |
-        git pull origin develop
+        git branch
     -
       name: Set up Python
       uses: actions/setup-python@v2
