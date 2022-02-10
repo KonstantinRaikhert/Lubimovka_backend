@@ -17,6 +17,8 @@ jobs:
     -
       name: Check out the repo
       uses: actions/checkout@v2
+    -
+      name: Pull from develop branch
       run: git pull origin develop
     -
       name: Set up Python
