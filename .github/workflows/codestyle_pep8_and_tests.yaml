@@ -1,6 +1,9 @@
 name: codestyle with PEP8 and tests
 
 on:
+  push:
+    branches:
+      - "*"
   pull_request:
     branches:
       - develop
